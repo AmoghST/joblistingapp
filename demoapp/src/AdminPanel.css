@@ -1,0 +1,87 @@
+/* Admin Panel Styles */
+.admin-panel {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+  }
+  
+  .header {
+    font-size: 2rem;
+    text-align: center;
+    color: #333;
+  }
+  
+  .job-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .input-field {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+  }
+  
+  .input-field:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
+  .submit-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .submit-btn:hover {
+    background-color: #218838;
+  }
+  
+  .job-list-header {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 30px;
+    color: #333;
+  }
+  
+  .job-list-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .job-list-table th, .job-list-table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  .job-list-table th {
+    background-color: #f1f1f1;
+    font-weight: bold;
+  }
+  
+  .job-list-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .job-list-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
