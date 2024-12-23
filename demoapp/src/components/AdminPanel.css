@@ -1,0 +1,139 @@
+/* Admin Panel Styles */
+.admin-panel {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+  }
+  
+  .header {
+    font-size: 2rem;
+    text-align: center;
+    color: #333;
+  }
+  
+  .job-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .input-field {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+  }
+  
+  .input-field:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
+  .submit-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .submit-btn:hover {
+    background-color: #218838;
+  }
+  
+  
+  .job-list-header {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 30px;
+    color: #333;
+  }
+  .tablerow{
+    height: 60px;
+  }
+  
+  /* Table Container Styling */
+.job-list-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.job-list-table thead tr {
+  background-color: #343a40; /* Dark header */
+  color: #fff;
+  text-align: left;
+}
+
+.job-list-table th, .job-list-table td {
+  padding: 12px 15px;
+  text-align: left;
+  font-size: 16px;
+}
+
+.job-list-table tbody tr {
+  border-bottom: 1px solid #dee2e6;
+}
+
+.job-list-table tbody tr:hover {
+  background-color: #f1f3f5; /* Light gray hover effect */
+}
+
+.job-list-table tbody tr:nth-child(odd) {
+  background-color: #f8f9fa; /* Alternating row colors */
+}
+
+.job-list-table tbody td {
+  vertical-align: middle;
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+  .job-list-table {
+    font-size: 14px;
+  }
+
+  .job-list-table thead {
+    display: none; /* Hide table header on small screens */
+  }
+
+  .job-list-table tr {
+    display: block;
+    margin-bottom: 15px;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 10px;
+  }
+
+  .job-list-table td {
+    display: block;
+    text-align: right;
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .job-list-table td:before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #6c757d;
+  }
+}
+
+  
