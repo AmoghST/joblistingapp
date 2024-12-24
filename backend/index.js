@@ -125,7 +125,7 @@ app.get('/candidate/jobs', (req, res) => {
 });
 
 const openai = new OpenAI({
-  apiKey:process.env.OPEN_AI_KEY
+  apiKey:''
 });
 
 //this is the middleware 
