@@ -182,6 +182,43 @@ app.post("/candidate/chat",fetchJobsMiddleware, async (req, res) => {
   }
 });
 
+// Endpoint to search jobs
+app.post('/search-jobs', (req, res) => {
+    const userQuery = req.body.query;
+
+    if (!userQuery) {
+        return res.status(400).send({ error: 'Query is required' });
+    }
+    console.log('Received query:', userQuery);
+
+    // Extract keywords (simple example, refine for production use)
+    const keywords = userQuery.toLowerCase().split(' ');
+    console.log('Extracted keywords:', keywords);
+    const jobTitleKeyword = keywords.find(word => word === 'engineer' || word === 'scientist' || word === 'data analyst');
+    console.log('Job Title Keyword:', jobTitleKeyword);
+    const locationKeyword = keywords.find(word => word === 'mumbai' || word === 'pune');
+    console.log('Location Keyword:', locationKeyword);
+
+    // Build the SQL query
+    const sql = `
+        SELECT * 
+        FROM jobs
+        WHERE 
+            jobTitle LIKE ? 
+            AND location LIKE ?
+    `;
+
+    pool.query(sql, [`%${jobTitleKeyword}%`, `%${locationKeyword}%`], (err, results) => {
+        if (err) {
+            console.error('Database query error:', err);
+            return res.status(500).send({ error: 'Database query failed' });
+        }
+
+        res.send({ jobs: results });
+        console.log('Jobs found:', results);
+    });
+});
+
 
 // Start the server
 app.listen(port, () => {

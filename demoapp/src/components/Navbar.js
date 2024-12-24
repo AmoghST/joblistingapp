@@ -19,6 +19,9 @@ const Navbar = () => {
         <li class="nav-item">
           <Link class="nav-link active" aria-current="page" to="/chatbot">ChatBot</Link>
         </li>
+        <li class="nav-item">
+          <Link class="nav-link active" aria-current="page" to="/search-jobs">DummyBot</Link>
+        </li>
        
       </ul>
       

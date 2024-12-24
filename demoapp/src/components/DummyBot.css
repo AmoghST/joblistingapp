@@ -1,0 +1,107 @@
+
+
+
+/* Heading */
+h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Search Box */
+.search-box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.search-box input {
+    width: 70%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    outline: none;
+}
+
+.search-box input:focus {
+    border-color: #007bff;
+}
+
+.search-box button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-box button:hover {
+    background-color: #218838;
+}
+
+/* Loading and Error Messages */
+p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.loading {
+    color: #007bff;
+}
+
+.error {
+    color: #e74c3c;
+}
+
+/* Results Container */
+.results {
+    margin-top: 20px;
+}
+
+.job-card {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.job-card h3 {
+    font-size: 1.6rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.job-card p {
+    font-size: 1rem;
+    color: #555;
+    margin: 5px 0;
+}
+
+.job-card strong {
+    font-weight: bold;
+    color: #333;
+}
+
+/* No Jobs Found */
+.no-jobs-message {
+    color: #999;
+    font-size: 1.2rem;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+    .search-box input {
+        width: 60%;
+    }
+
+    .search-box button {
+        width: 30%;
+    }
+}
